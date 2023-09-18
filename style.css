@@ -152,6 +152,8 @@ nav li:hover:before {
 .aboutme-header {
   margin: 15px 0;
   font-size: 1.2rem;
+  text-decoration: underline rgb(169, 189, 67) 5px;
+  text-underline-offset: 4px;
 }
 .aboutme-part {
   line-height: 24px;
@@ -166,50 +168,180 @@ nav li:hover:before {
   background: rgb(235, 235, 235);
   padding: 80px 0 40px;
 }
-.general-skills-header {
+.main-skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-skills-header {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 50px;
   font-size: 1.2rem;
+  text-decoration: underline rgb(169, 189, 67) 5px;
+  text-underline-offset: 4px;
 }
-.skills-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+/* ///////////////////////////////////  SKILLS TECH PART START  //////////////////////// */
+
+/* ---------------------------- TECH HEADER START -------------------- */
+.tech-header {
+  width: 25%;
+  background: rgb(169, 189, 67);
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  border-radius: 15px;
+  margin-left: 40px;
+  margin-bottom: -5px;
+  padding: 0 0 0 15px;
+  color: rgb(255, 255, 255);
 }
-.skills-container .skills-list {
-  width: 24%;
-  background: rgb(255, 255, 255);
-  padding-top: 30px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px 3px rgb(201, 201, 201);
+.tech-header h3 {
+  font-size: 1.6rem;
 }
-.icon-right .fa-primary-color {
-  color: white;
+/* ---------------------------- TECH HEADER END -------------------- */
+/* ---------------------------- TECH BODY START -------------------- */
+.tech-content {
+  display: grid;
+  grid-template-columns: 75% 25%;
 }
-.icon-left .fa-primary-color {
-  color: rgb(169, 189, 67);
+.tech-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "frt bck wp"
+    "frt bck wd";
+  background: white;
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  border-radius: 15px;
+  width: 85%;
+  margin: 20px 0 20px 40px;
+  padding: 0 0 20px 15px;
+}
+.tech-items-front {
+  grid-area: frt;
+}
+.tech-items-back {
+  grid-area: bck;
+}
+.tech-items-wp {
+  grid-area: wp;
+}
+.tech-items-wd {
+  grid-area: wd;
+}
+.tech-title h4 {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 15px 0 5px 22px;
+  font-weight: 700;
+  text-decoration: underline 2px solid rgb(169, 189, 67);
+  text-underline-offset: 4px;
 }
 
-.skills-header {
-}
-.skills-title h3 {
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-.skills-items {
+.tech-items-container {
   display: flex;
   justify-content: space-around;
+  padding-top: 10px;
+}
+.tech-skills-name {
+  font-weight: 500;
+  line-height: 25px;
   text-align: left;
-  margin: 0 auto 20px;
 }
-.skills-name {
-  font-weight: 600;
-  line-height: 30px;
-}
-.skills-level {
-  line-height: 30px;
+.tech-skills-level {
+  line-height: 25px;
   color: rgb(169, 189, 67);
 }
+/* ---------------------------- TECH ICONS START -------------------- */
+
+.skills-tech-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 20px;
+}
+.icons-tech:nth-child(1) .fa-primary-color {
+  color: rgb(0, 0, 0);
+}
+.icons-tech:nth-child(2) .fa-primary-color {
+  color: rgb(0, 0, 0);
+}
+.icons-tech:nth-child(3) .fa-primary-color {
+  color: rgb(0, 0, 0);
+}
+.icons-tech:nth-child(4) .fa-primary-color {
+  color: rgb(0, 0, 0);
+}
+/* ---------------------------- TECH ICONS END -------------------- */
+/* ---------------------------- TECH BODY END -------------------- */
+
+/* ///////////////////////////////////  SKILLS TECH PART END  //////////////////////// */
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* ///////////////////////////////////  SKILLS PRO PART START  //////////////////////// */
+.skills-pro {
+  margin: 80px auto;
+}
+/* ---------------------------- PRO HEADER START -------------------- */
+.pro-header {
+  width: 25%;
+  background: rgb(169, 189, 67);
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  border-radius: 15px;
+  margin-left: 40px;
+  margin-bottom: -5px;
+  margin-right: 20px;
+  padding: 0 0 0 15px;
+  color: rgb(255, 255, 255);
+  float: right;
+}
+.pro-header h3 {
+  font-size: 1.6rem;
+}
+/* ---------------------------- PRO HEADER END -------------------- */
+/* ---------------------------- PRO BODY START -------------------- */
+.pro-content {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  justify-items: end;
+  clear: right;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+/* ---------------------------- PRO ICONS START-------------------- */
+.pro-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icons-pro img {
+  width: 100%;
+  padding-left: 30px;
+}
+/* ---------------------------- PRO ICONS END-------------------- */
+
+.pro-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 90%;
+  background: white;
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  border-radius: 15px;
+  padding: 30px 0;
+}
+.pro-items-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 10px;
+}
+.pro-skills-name {
+  width: 60%;
+  text-align: left;
+  font-weight: 500;
+}
+.pro-skills-level {
+  color: rgb(169, 189, 67);
+}
+
+/* ///////////////////////////////////  SKILLS PRO PART END  //////////////////////// */
