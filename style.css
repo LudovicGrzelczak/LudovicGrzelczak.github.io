@@ -96,7 +96,9 @@ nav li:hover:before {
 }
 
 /* ********************** ABOUT ME ************************** */
-
+.aboutme {
+  padding: 40px 0;
+}
 .aboutme-container {
   max-width: 1200px;
   margin: 50px auto;
@@ -135,6 +137,7 @@ nav li:hover:before {
   font-weight: 700;
   text-decoration: underline 2px solid rgb(169, 189, 67);
   text-underline-offset: 4px;
+  padding-right: 10px;
 }
 .profil-button button {
   margin-top: 20px;
@@ -175,13 +178,13 @@ nav li:hover:before {
 
 .skills {
   background: rgb(235, 235, 235);
-  padding: 80px 0 40px;
+  padding: 100px 0 40px;
 }
-.main-skills-container {
+.skills-container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.main-skills-header {
+.skills-header {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -310,7 +313,7 @@ nav li:hover:before {
 }
 /* ---------------------------- PRO HEADER END -------------------- */
 /* ---------------------------- PRO BODY START -------------------- */
-.pro-content {
+.pro-skills-content {
   display: grid;
   grid-template-columns: 35% 65%;
   justify-items: end;
@@ -330,7 +333,7 @@ nav li:hover:before {
 }
 /* ---------------------------- PRO ICONS END-------------------- */
 
-.pro-container {
+.pro-skills-container {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 90%;
@@ -354,3 +357,78 @@ nav li:hover:before {
 }
 
 /* ///////////////////////////////////  SKILLS PRO PART END  //////////////////////// */
+
+/* ********************** CAREER ************************** */
+
+.career {
+  padding: 40px 0;
+}
+
+
+
+
+.career-header{
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  text-decoration: underline rgb(169, 189, 67) 5px;
+  text-underline-offset: 4px;
+}
+
+
+
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tl-container {
+  padding: 20px 50px;
+  position: relative;
+}
+.text-box {
+  padding: 5px;
+  position: relative;
+  font-size: 1rem;
+  width: 70%;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  border-radius: 15px;
+  margin-left: 35%;
+}
+.text-box::before {
+  content: " ";
+    height: 0;
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 0;
+    z-index: 1;
+    left: -10px;
+    border: medium solid #EBEBEB;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #EBEBEB transparent transparent;
+}
+
+
+
+.date {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: rgb(169, 189, 67);
+  top: 0;
+  left: 25%;
+  z-index: -1;
+}
+
