@@ -58,7 +58,14 @@ nav li:hover:before {
   background: rgb(169, 189, 67);
   transform: translateY(30px);
 }
-
+.section-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  text-decoration: underline rgb(169, 189, 67) 5px;
+  text-underline-offset: 4px;
+}
 /* ********************** HOME PAGE ************************** */
 
 .main-header {
@@ -75,10 +82,9 @@ nav li:hover:before {
   position: absolute;
   top: 30%;
   transition: 1s ease;
-
 }
 
-.header-name h2 {
+.header-name h1 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2rem;
@@ -87,12 +93,39 @@ nav li:hover:before {
   color: rgb(169, 189, 67);
   font-weight: 800;
 }
-.header-text {
-  margin: 30px 0;
+.header-text h2{
+  margin: 20px 0;
   font-size: 1.4rem;
+  font-weight: 500;
 }
-.header-text span {
+
+
+.typewriter {
   text-decoration: underline rgb(169, 189, 67);
+  display: inline-block;
+  position: relative;
+}
+.typewriter::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: black;
+  right: -5px;
+  top: 0;
+  animation: cursor 1s infinite;
+}
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ********************** ABOUT ME ************************** */
@@ -184,21 +217,14 @@ nav li:hover:before {
   max-width: 1200px;
   margin: 0 auto;
 }
-.skills-header {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  font-size: 1.2rem;
-  text-decoration: underline rgb(169, 189, 67) 5px;
-  text-underline-offset: 4px;
-}
+
 /* ///////////////////////////////////  SKILLS TECH PART START  //////////////////////// */
 
 /* ---------------------------- TECH HEADER START -------------------- */
 .tech-header {
   width: 25%;
   background: rgb(169, 189, 67);
-  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
   margin-left: 40px;
   margin-bottom: -5px;
@@ -222,7 +248,7 @@ nav li:hover:before {
     "frt bck wp"
     "frt bck wd";
   background: white;
-  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
   width: 85%;
   margin: 20px 0 20px 40px;
@@ -361,74 +387,115 @@ nav li:hover:before {
 /* ********************** CAREER ************************** */
 
 .career {
-  padding: 40px 0;
+  padding: 100px 0 40px;
 }
-
-
-
-
-.career-header{
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  font-size: 1.2rem;
-  text-decoration: underline rgb(169, 189, 67) 5px;
-  text-underline-offset: 4px;
-}
-
-
-
-
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 .tl-container {
-  padding: 20px 50px;
+  padding: 20px 0;
   position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+.pro-container {
+  left: -25%;
+  padding-right: 100px;
+}
+.educ-container {
+  left: 25%;
+  padding-left: 100px;
+}
+.pro-container .text-box {
+  box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
+}
+.educ-container .text-box {
+  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
 }
 .text-box {
   padding: 5px;
   position: relative;
   font-size: 1rem;
-  width: 70%;
+  width: 100%;
   background: rgb(235, 235, 235);
-  box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
-  margin-left: 35%;
+  padding: 10px;
+  text-align: left;
 }
-.text-box::before {
-  content: " ";
-    height: 0;
-    position: absolute;
-    top: calc(50% - 10px);
-    width: 0;
-    z-index: 1;
-    left: -10px;
-    border: medium solid #EBEBEB;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #EBEBEB transparent transparent;
+.text-box li {
+  list-style: inside;
 }
-
-
-
+.tb-header {
+  padding: 10px 20px;
+}
+.tb-header h4 {
+  color: rgb(169, 189, 67);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.tb-header h5 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.tb-header p {
+  font-size: 0.7rem;
+}
+.tb-header span {
+  font-weight: 600;
+}
+.tb-content {
+  padding: 10px 20px;
+}
 .date {
   position: absolute;
+  width: 140px;
+  border: 2px solid rgb(169, 189, 67);
+  border-radius: 5px;
+  background: white;
+  right: -70px;
   top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
+  z-index: 1;
+  padding: 5px;
   font-size: 1.2rem;
+  font-weight: 600;
 }
-
+.educ-container .date {
+  left: -65px;
+}
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   height: 100%;
   background: rgb(169, 189, 67);
   top: 0;
-  left: 25%;
   z-index: -1;
 }
-
+.pro-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgb(235, 235, 235);
+  right: -15px;
+}
+.educ-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgb(235, 235, 235);
+  left: -15px;
+}
