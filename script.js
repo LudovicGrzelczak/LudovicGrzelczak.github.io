@@ -13,12 +13,12 @@ function typewriter(word, index) {
 }
 setTimeout(() => {
   typewriter(txt, 0);
-}, 500);
+}, 700);
 
 // ************************ animation header-container *************
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 70) {
     myName.classList.add("animate__animated", "animate__fadeOutDown");
   } else {
     myName.classList.remove("animate__animated", "animate__fadeOutDown");
