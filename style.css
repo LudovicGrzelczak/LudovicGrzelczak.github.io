@@ -2,7 +2,10 @@
   font-family: "Montserrat";
   src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
-
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -44,10 +47,12 @@ nav li {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.1rem;
-  cursor: pointer;
   position: relative;
   transition: 0.3s ease;
   padding: 20px 0;
+}
+nav li a {
+  cursor: pointer;
 }
 
 nav li:hover:before {
@@ -69,7 +74,7 @@ nav li:hover:before {
 /* ********************** HOME PAGE ************************** */
 
 .main-header {
-  background: url(./assets/img/apple-1868496_1920.jpg) fixed center/cover;
+  background: url(./assets/img/apple-1868496_1920.jpg) center/cover;
   filter: brightness(93%);
   min-height: 100vh;
   display: flex;
@@ -141,10 +146,10 @@ nav li:hover:before {
   padding: 20px 0 50px 0;
 }
 
-.aboutme-container .part-left {
+.aboutme-container .left-part {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -193,7 +198,8 @@ nav li:hover:before {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  padding: 0 30px;
+  padding-left: 20px;
+  padding-right: 60px;
 }
 .aboutme-header {
   margin: 15px 0;
@@ -227,7 +233,7 @@ nav li:hover:before {
   background: rgb(169, 189, 67);
   box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
-  margin-left: 40px;
+
   margin-bottom: -5px;
   padding: 0 0 0 15px;
   color: rgb(255, 255, 255);
@@ -252,7 +258,7 @@ nav li:hover:before {
   box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
   width: 85%;
-  margin: 20px 0 20px 40px;
+  margin: 20px 0 20px 0;
   padding: 0 0 20px 15px;
 }
 .tech-items-front {
@@ -298,6 +304,7 @@ nav li:hover:before {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin-top: 20px;
+  padding-right: 30px;
 }
 .icons-tech:nth-child(1) .fa-primary-color {
   color: rgb(0, 0, 0);
@@ -328,9 +335,7 @@ nav li:hover:before {
   background: rgb(169, 189, 67);
   box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
-  margin-left: 40px;
   margin-bottom: -5px;
-  margin-right: 20px;
   padding: 0 0 0 15px;
   color: rgb(255, 255, 255);
   float: right;
@@ -345,7 +350,6 @@ nav li:hover:before {
   grid-template-columns: 35% 65%;
   justify-items: end;
   clear: right;
-  padding-left: 10px;
   padding-top: 20px;
 }
 /* ---------------------------- PRO ICONS START-------------------- */
@@ -388,7 +392,7 @@ nav li:hover:before {
 /* ********************** CAREER ************************** */
 
 .career {
-  padding: 80px 0 80px;
+  padding: 80px 0 100px;
 }
 .timeline {
   position: relative;
@@ -449,6 +453,7 @@ nav li:hover:before {
 }
 .tb-content {
   padding: 10px 20px;
+  line-height: 25px;
 }
 .date {
   position: absolute;
@@ -482,7 +487,7 @@ nav li:hover:before {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  z-index: 1;
+  z-index: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid rgb(235, 235, 235);
@@ -494,19 +499,14 @@ nav li:hover:before {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  z-index: 1;
+  z-index: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid rgb(235, 235, 235);
   left: -15px;
 }
 
-
-
-
-
 /* ********************** CONTACT ************************** */
-
 
 .contact {
   background: rgb(235, 235, 235);
@@ -520,8 +520,11 @@ nav li:hover:before {
   justify-content: space-between;
   align-items: center;
 }
+.contact-container .section-header {
+  padding-bottom: 50px;
+}
 .contact-text {
-font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 .contact-text div {
   font-weight: 600;
@@ -566,6 +569,7 @@ footer {
   background: rgb(58, 58, 58);
   color: white;
   font-size: 0.8rem;
+  padding: 20px;
 }
 footer i {
   font-size: 3rem;
