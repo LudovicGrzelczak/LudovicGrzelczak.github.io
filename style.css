@@ -75,7 +75,7 @@ nav li:hover:before {
 
 .main-header {
   background: url(./assets/img/apple-1868496_1920.jpg) center/cover;
-  filter: brightness(93%);
+  filter: brightness(85%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -87,22 +87,22 @@ nav li:hover:before {
   display: block;
   position: absolute;
   top: 30%;
-  left: 39%;
+  left: 38%;
   transition: 1s ease;
 }
 
 .header-name h1 {
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .header-name .name {
   color: rgb(169, 189, 67);
   font-weight: 800;
 }
-.header-text h2 {
+.header-text-container h2 {
   margin: 20px 0;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -575,4 +575,118 @@ footer i {
   font-size: 3rem;
   color: rgb(169, 189, 67);
   padding: 30px;
+}
+
+@media screen and (max-width: 2200px) {
+  .header-container {
+    left: 36%;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .header-container {
+    left: 36%;
+    top: 32%;
+  }
+  .header-name h1 {
+    font-size: 2.5rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .header-container {
+    left: 36%;
+    top: 34%;
+  }
+  .header-name h1 {
+    font-size: 2.2rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .header-container {
+    left: 36%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header-container {
+    left: 35%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .header-container {
+    left: 34%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header-container {
+    left: 32%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-container {
+    left: 28%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .header-container {
+    left: 25%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-container {
+    left: 23%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
 }
