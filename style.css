@@ -233,9 +233,7 @@ nav li:hover:before {
   background: rgb(169, 189, 67);
   box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
-
   margin-bottom: -5px;
-  padding: 0 0 0 15px;
   color: rgb(255, 255, 255);
 }
 .tech-header h3 {
@@ -257,7 +255,7 @@ nav li:hover:before {
   background: white;
   box-shadow: -3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
-  width: 85%;
+  width: 95%;
   margin: 20px 0 20px 0;
   padding: 0 0 20px 15px;
 }
@@ -303,21 +301,19 @@ nav li:hover:before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin-top: 20px;
-  padding-right: 30px;
+  width: 100%;
 }
-.icons-tech:nth-child(1) .fa-primary-color {
-  color: rgb(0, 0, 0);
+.icons-tech {
+  position: relative;
 }
-.icons-tech:nth-child(2) .fa-primary-color {
-  color: rgb(0, 0, 0);
+.icons-tech i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
 }
-.icons-tech:nth-child(3) .fa-primary-color {
-  color: rgb(0, 0, 0);
-}
-.icons-tech:nth-child(4) .fa-primary-color {
-  color: rgb(0, 0, 0);
-}
+
 /* ---------------------------- TECH ICONS END -------------------- */
 /* ---------------------------- TECH BODY END -------------------- */
 
@@ -336,7 +332,6 @@ nav li:hover:before {
   box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
   border-radius: 15px;
   margin-bottom: -5px;
-  padding: 0 0 0 15px;
   color: rgb(255, 255, 255);
   float: right;
 }
@@ -577,6 +572,7 @@ footer i {
   padding: 30px;
 }
 
+/* ************************************* MEDIA ******************************************** */
 @media screen and (max-width: 2200px) {
   .header-container {
     left: 36%;
@@ -644,7 +640,7 @@ footer i {
 }
 @media screen and (max-width: 1280px) {
   .header-container {
-    left: 32%;
+    left: 33%;
     top: 35%;
   }
   .header-name h1 {
@@ -654,9 +650,40 @@ footer i {
     font-size: 1.2rem;
   }
 }
+@media screen and (max-width: 1200px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header-container {
+    left: 32%;
+    top: 35%;
+  }
+  .header-name h1 {
+    font-size: 2.1rem;
+  }
+  .header-text-container h2 {
+    font-size: 1.2rem;
+  }
+  .skills-tech {
+    padding: 0 30px;
+  }
+  .icons-tech i {
+    font-size: 4rem;
+  }
+  .skills-pro {
+    padding: 0 30px;
+  }
+  .timeline {
+    padding: 0 30px;
+  }
+  .text-box {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header-container {
-    left: 28%;
+    left: 29%;
     top: 35%;
   }
   .header-name h1 {
@@ -664,6 +691,57 @@ footer i {
   }
   .header-text-container h2 {
     font-size: 1.2rem;
+  }
+  .profil p {
+    font-size: 0.9rem;
+  }
+  .aboutme-part {
+    font-size: 0.9rem;
+  }
+  .icons-tech i {
+    font-size: 3.6rem;
+  }
+  .tech-header h3 {
+    font-size: 1.3rem;
+  }
+  .tech-title h4 {
+    font-size: 1rem;
+  }
+  .tech-skills-name li {
+    font-size: 0.8rem;
+  }
+  .tech-skills-level li {
+    font-size: 0.9rem;
+  }
+  .pro-header h3 {
+    font-size: 1.3rem;
+  }
+  .pro-skills-name {
+    font-size: 0.8rem;
+  }
+  .pro-skills-level li {
+    font-size: 0.9rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+  .tb-header {
+    padding: 10px 10px;
+  }
+  .tb-header h4 {
+    font-size: 1.1rem;
+  }
+  .tb-header h5 {
+    font-size: 0.8rem;
+  }
+  .contact-box {
+    width: 80%;
+  }
+  .contact-box i {
+    font-size: 2rem;
+  }
+  .contact-text-box {
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 900px) {
@@ -677,6 +755,58 @@ footer i {
   .header-text-container h2 {
     font-size: 1.2rem;
   }
+  .profil p {
+    font-size: 0.75rem;
+  }
+  .aboutme-part {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+  .icons-tech i {
+    font-size: 3rem;
+  }
+  .tl-container {
+    width: 70%;
+    left: 0;
+    margin: 50px auto;
+  }
+  .pro-container {
+    padding: 10px 0;
+  }
+  .pro-container .date {
+    right: 0;
+    left: -20%;
+    width: 100px;
+  }
+  .pro-container .text-box {
+    box-shadow: 3px 3px 3px 3px rgb(194, 194, 194);
+  }
+  .pro-arrow {
+    border-left: 0 transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(235, 235, 235);
+    left: -15px;
+  }
+  .educ-container {
+    padding: 10px 0;
+  }
+  .educ-container .date {
+    width: 100px;
+    left: -20%;
+  }
+  .text-box {
+    margin-left: 30px;
+  }
+  .timeline::after {
+    left: 10%;
+  }
+  .contact-text {
+    font-size: 1rem;
+  }
+  .contact-text-box {
+    font-size: 0.7rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .header-container {
@@ -688,5 +818,41 @@ footer i {
   }
   .header-text-container h2 {
     font-size: 1.2rem;
+  }
+  .aboutme-container {
+    display: block;
+  }
+  .aboutme-container div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .aboutme-container .left-part {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "img prof"
+      "img but";
+    margin-bottom: 30px;
+    padding-left: 5%;
+  }
+  .img-profil {
+    grid-area: img;
+  }
+  .profil {
+    grid-area: prof;
+    padding-top: 40px;
+  }
+  .profil-button {
+    grid-area: but;
+  }
+  .profil-button button {
+    display: block;
+  }
+  .aboutme-container .right-part {
+    padding-left: 5%;
+  }
+  .aboutme-header {
+    padding-bottom: 30px;
   }
 }
